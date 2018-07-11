@@ -1,9 +1,9 @@
 {
-  "name": "vue-select-image",
+  "name": "vue-select-item",
   "description": "Vue 2 Component for selecting image from list",
-  "version": "1.5.0",
+  "version": "0.0.1",
   "license": "MIT",
-  "author": "Irfan Maulana (https://github.com/mazipan/)",
+  "author": "thisninja",
   "private": false,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --open",
@@ -22,10 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/mazipan/vue-select-image.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mazipan/vue-select-image/issues"
+    "url": "https://github.com/thisninja/vue-select-image.git"
   },
   "keywords": [
     "vue select image",

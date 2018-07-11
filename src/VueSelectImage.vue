@@ -2,7 +2,7 @@
   <div :class="rootClass">
     <ul :class="rootClass + '__wrapper'">
 
-      <li v-for="(dataImage, index) in dataImagesLocal" :key="index"
+      <li :disabled="dataImagesLocal[index].disabled" v-for="(dataImage, index) in dataImagesLocal" :key="index"
         :class="rootClass + '__item'">
 
         <div
@@ -20,6 +20,11 @@
                 {{dataImage.alt}}
           </label>
         </div>
+        <span v-if="useCheckMark && !isMultiple && (singleSelected.id ===  dataImage.id)" class="checkmark">
+          <div class="checkmark_circle"></div>
+          <div class="checkmark_stem"></div>
+          <div class="checkmark_kick"></div>
+        </span>
 
         <div
           :class="classThumbnailMultiple(dataImage.id)"
@@ -56,6 +61,10 @@ export default {
       default: () => []
     },
     isMultiple: {
+      type: Boolean,
+      default: false
+    },
+    useCheckMark: {
       type: Boolean,
       default: false
     },
@@ -114,6 +123,7 @@ export default {
       return `${baseMultipleClass}`
     },
     onSelectImage(objectImage) {
+      if (objectImage.disabled) return
       this.singleSelected = Object.assign({}, this.singleSelected, objectImage)
       this.$emit('onselectimage', objectImage)
     },

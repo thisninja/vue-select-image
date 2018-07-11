@@ -37,7 +37,8 @@ export default {
       }, {
         id: '3',
         src: 'http://placekitten.com/200/200',
-        alt: 'Vue.js'
+        alt: 'Vue.js',
+        disabled: true
       }, {
         id: '4',
         src: 'http://placekitten.com/200/200',
