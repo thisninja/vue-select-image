@@ -4,7 +4,6 @@ test/coverage
 npm-debug.log
 yarn-error.log
 dist-demo/
-dist/
 
 # Editor directories and files
 .idea
