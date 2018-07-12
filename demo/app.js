@@ -29,7 +29,8 @@ export default {
       dataImages: [{
         id: '1',
         src: 'http://placekitten.com/200/200',
-        alt: 'jQuery'
+        alt: 'jQuery',
+        useMask: true
       }, {
         id: '2',
         src: 'http://placekitten.com/200/200',

@@ -9,7 +9,7 @@
           :class="classThumbnail(singleSelected.id, dataImage.id)"
           @click="onSelectImage(dataImage)"
           v-if="!isMultiple">
-          <div :class="rootClass + '__mask'" v-if="useMask">
+          <div :class="rootClass + '__mask'" v-if="useMask && dataImage.useMask">
             <span v-if="useMask && maskContent" :class="rootClass + '__mask-content'" v-html="maskContent"></span>
           </div>
           <img :src="dataImage.src"
