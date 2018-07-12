@@ -15,8 +15,11 @@
       </InArticleAdsense>
 
       <div class="grid__row content centered">
-        <h2>Single Selection</h2>
-        <vue-select-image :dataImages="dataImages"
+        <h2>Single Selection Test</h2>
+        <vue-select-image
+                          :useMask="true"
+                          :maskContent="'coming soon...'"
+                          :dataImages="dataImages"
                           @onselectimage="onSelectImage">
         </vue-select-image>
         <div>

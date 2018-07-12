@@ -9,6 +9,9 @@
           :class="classThumbnail(singleSelected.id, dataImage.id)"
           @click="onSelectImage(dataImage)"
           v-if="!isMultiple">
+          <div :class="rootClass + '__mask'" v-if="useMask">
+            <span v-if="useMask && maskContent" :class="rootClass + '__mask-content'" v-html="maskContent"></span>
+          </div>
           <img :src="dataImage.src"
                :alt="dataImage.alt"
                :height="h"
@@ -65,6 +68,14 @@ export default {
       default: false
     },
     useCheckMark: {
+      type: Boolean,
+      default: false
+    },
+    maskContent: {
+      type: String,
+      default: ''
+    },
+    useMask: {
       type: Boolean,
       default: false
     },

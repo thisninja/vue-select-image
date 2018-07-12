@@ -13,6 +13,10 @@
   float: left;
 }
 
+.vue-select-image__mask {
+  position: absolute;
+}
+
 .vue-select-image__thumbnail{
   padding: 6px;
   border: 1px solid #dddddd;
